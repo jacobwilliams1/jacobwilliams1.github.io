@@ -1,6 +1,167 @@
 <html>
+
+<head>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="weatherly.css">
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <nav class="navbar navbar-fixed-top">
+        <a  style="color: black; background-color: transparent;" class="navbar-brand" href="#">WEATHERLY</a>
+        <ul class="nav navbar-nav">
+        </ul>
+        <div class="dropdown pull-right">
+            <button style="height: 50px; width: 50px" class="glyphicon glyphicon-plus dropdown-toggle pull-right" type="button" data-toggle="dropdown"></button>
+            <ul style="width: 300px" class="dropdown-menu">
+                <li>
+                    <form action="demo_form.asp">
+                        Zip Code: <input type="text" name="zipcode" required>
+                        <input type="submit">
+                    </form>
+                </li>
+        </div>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="column">
+            <div class="col-md-3" style="background-color: red; height: 400px; margin: 50px; border-radius: 10px">
+                <h2>Paintsville, Ky</h2>
+                <h1 style="font-size: 80px; text-align: center;">70&deg; F</h1>
+                <br />
+                <br />
+                <hr style="color: black;">
+                <br />
+                <div style="text-align: center;" class="row">
+                    <div style="font-size: 30px" class=col-md-4>70&deg;F</div>
+                    <div style="font-size: 30px" class=col-md-4>70%</div>
+                    <div style="font-size: 30px" class=col-md-4>70&deg;F</div>
+                </div>
+                <br />
+                <br />
+                <div style="text-align: center;" class="row">
+                    <div class=col-md-4>Max</div>
+                    <div class=col-md-4>Rain %</div>
+                    <div class=col-md-4>Min</div>
+                </div>
+            </div>
+            <div class="col-md-3" style="background-color: red; height: 400px; margin: 50px; border-radius: 10px">
+                <h2>Paintsville, Ky</h2>
+                <h1 style="font-size: 80px; text-align: center;">70&deg; F</h1>
+                <br />
+                <br />
+                <hr style="color: black;">
+                <br />
+                <div style="text-align: center;" class="row">
+                    <div style="font-size: 30px" class=col-md-4>70&deg;F</div>
+                    <div style="font-size: 30px" class=col-md-4>70%</div>
+                    <div style="font-size: 30px" class=col-md-4>70&deg;F</div>
+                </div>
+                <br />
+                <br />
+                <div style="text-align: center;" class="row">
+                    <div class=col-md-4>Max</div>
+                    <div class=col-md-4>Rain %</div>
+                    <div class=col-md-4>Min</div>
+                </div>
+            </div>
+            <div class="col-md-3" style="background-color: red; height: 400px; margin-left: 50px; margin-top: 50px; border-radius: 10px">
+                <h2>Paintsville, Ky</h2>
+                <h1 style="font-size: 80px; text-align: center;">70&deg; F</h1>
+                <br />
+                <br />
+                <hr style="color: black;">
+                <br />
+                <div style="text-align: center;" class="row">
+                    <div style="font-size: 30px" class=col-md-4>70&deg;F</div>
+                    <div style="font-size: 30px" class=col-md-4>70%</div>
+                    <div style="font-size: 30px" class=col-md-4>70&deg;F</div>
+                </div>
+                <br />
+                <br />
+                <div style="text-align: center;" class="row">
+                    <div class=col-md-4>Max</div>
+                    <div class=col-md-4>Rain %</div>
+                    <div class=col-md-4>Min</div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="col-md-3" style="background-color: red; height: 400px; margin: 50px; border-radius: 10px">
+                <h2>Paintsville, Ky</h2>
+                <h1 style="font-size: 80px; text-align: center;">70&deg; F</h1>
+                <br />
+                <br />
+                <hr style="color: black;">
+                <br />
+                <div style="text-align: center;" class="row">
+                    <div style="font-size: 30px" class=col-md-4>70&deg;F</div>
+                    <div style="font-size: 30px" class=col-md-4>70%</div>
+                    <div style="font-size: 30px" class=col-md-4>70&deg;F</div>
+                </div>
+                <br />
+                <br />
+                <div style="text-align: center;" class="row">
+                    <div class=col-md-4>Max</div>
+                    <div class=col-md-4>Rain %</div>
+                    <div class=col-md-4>Min</div>
+                </div>
+            </div>
+            <div class="col-md-3" style="background-color: red; height: 400px; margin: 50px; border-radius: 10px">
+                <h2>Paintsville, Ky</h2>
+                <h1 style="font-size: 80px; text-align: center;">70&deg; F</h1>
+                <br />
+                <br />
+                <hr style="color: black;">
+                <br />
+                <div style="text-align: center;" class="row">
+                    <div style="font-size: 30px" class=col-md-4>70&deg;F</div>
+                    <div style="font-size: 30px" class=col-md-4>70%</div>
+                    <div style="font-size: 30px" class=col-md-4>70&deg;F</div>
+                </div>
+                <br />
+                <br />
+                <div style="text-align: center;" class="row">
+                    <div class=col-md-4>Max</div>
+                    <div class=col-md-4>Rain %</div>
+                    <div class=col-md-4>Min</div>
+                </div>
+            </div>
+            <div class="col-md-3" style="background-color: red; height: 400px; margin-left: 50px; margin-top: 50px; border-radius: 10px">
+                <h2>Paintsville, Ky</h2>
+                <h1 style="font-size: 80px; text-align: center;">70&deg; F</h1>
+                <br />
+                <br />
+                <hr style="color: black;">
+                <br />
+                <div style="text-align: center;" class="row">
+                    <div style="font-size: 30px" class=col-md-4>70&deg;F</div>
+                    <div style="font-size: 30px" class=col-md-4>70%</div>
+                    <div style="font-size: 30px" class=col-md-4>70&deg;F</div>
+                </div>
+                <br />
+                <br />
+                <div style="text-align: center;" class="row">
+                    <div class=col-md-4>Max</div>
+                    <div class=col-md-4>Rain %</div>
+                    <div class=col-md-4>Min</div>
+                </div>
+            </div>
+        </div>
 </body>
+
+
 </html>
