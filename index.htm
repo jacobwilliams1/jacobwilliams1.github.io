@@ -36,7 +36,7 @@
 
 
     <nav class="navbar">
-        
+
         <a id="weatherly" style="color: black; background-color: transparent;" class="navbar-brand" href="#">WEATHERLY</a>
 
 
@@ -44,10 +44,12 @@
             id="socialbtn" class="btn btn-social-icon btn-facebook">
             <span class="fa fa-facebook"></span>
         </a>
-        <div class="dropdown pull-right">
-            <button style="height: 50px; width: 50px; background-color: transparent" class="glyphicon glyphicon-plus dropdown-toggle pull-right" type="button" data-toggle="dropdown"></button>
+        <!--<div class="dropdown pull-right">
+            <button style="height: 50px; width: 50px; background-color: transparent" class="glyphicon glyphicon-plus dropdown-toggle pull-right"
+                type="button" data-toggle="dropdown"></button>
             <ul style="width: 300px" class="dropdown-menu">
                 <li>
+                    -->
                     <label>Enter your current location: <input type="text" id="postalCode" placeholder="CURRENT LOCATION" /></label>
                     <button style="background-color: transparent" type="button" id="lookupWeatherForPostalCode">Lookup Weather</button>
                 </li>
@@ -59,27 +61,27 @@
 
     <div class="container">
         <div id="cards" class="row">
-    </div>
+        </div>
 
 
         <!-- **************     TEMPLATE DIV    ************** -->
 
-        <div id="templateDiv" style="display: none">
+        <div id="templateDiv" class=" flip-side-1 col-md-4 col-sm-12 col-xs-12" style="display: none">
 
 
 
-            <div id="rmv" class="col-md-3" style=>
+            <div id="rmv" class="col-md-4 col-sm-4 col-xs-4">
 
-<button id="removeCard" class="glyphicon glyphicon-remove-sign pull-right"></button>
+                <button id="removeCard" class="glyphicon glyphicon-remove-sign pull-right"></button>
 
-               <div class="row" id="areaName" >@@AREANAME@@</div>
+                <div class="row" id="areaName">@@AREANAME@@</div>
 
-<br />
-<br />
+                <br />
+                <br />
                 <div class="row" style="font-size: 40px; text-align: center;">@@CURRENTTEMP@@</div>
 
-<br />
-<br />
+                <br />
+                <br />
 
                 <div class="row" style="font-size: 40px; text-align: center;">@@SUMMARY@@</div>
                 <hr class="background-color: black">
@@ -90,7 +92,7 @@
                     <div style="font-size: 30px" class="col-md-4 col-sm-4 col-xs-4">@@LOWTEMP@@</div>
                 </div>
 
-            <br/>
+                <br/>
                 <div style="text-align: center;" class="row">
                     <div class="col-md-4 col-sm-4 col-xs-4">High</div>
                     <div class="col-md-4 col-sm-4 col-xs-4">Rain%</div>
@@ -98,13 +100,7 @@
                 </div>
             </div>
         </div>
-
-
-
-
-
-
-    </div>
+        </div>
 </body>
 
 

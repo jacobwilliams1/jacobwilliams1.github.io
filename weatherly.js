@@ -15,6 +15,8 @@ template = template.replace("@@RAINCHANCE@@", weatherData.precipProb);
 template = template.replace("@@LOWTEMP@@", weatherData.lowTemp);
 return template;
 }
+
+
 // ***************************
 // **  Google Web Services  **
 // ***************************
@@ -33,7 +35,7 @@ function lookupLatLong_Complete(result) {
  longName1 = result.address_components[1].long_name;
  longName2 = result.address_components[2].long_name; 
 
-  //  $("#areaName").append(longName1 + ", " + longName2);
+
 
     var darkSkyUrl = "https://api.darksky.net/forecast/4632e8545a2898126defa5846fff0637/" + latitude + "," + longitude;
 
@@ -58,9 +60,6 @@ function lookupLatLong(city, state, postalCode) {
     else {
         return; // they didn't give me anything valid, so exit
     }
-
-
-    //call darksky api
 
     // Call Google's API.
     var googleUrl = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "&key=AIzaSyAQsMF6GQMAD_JlBLibE1ZprVVwxK0kfac";

@@ -31,3 +31,32 @@ body {
     background-color: black;
     color: black;
 }
+
+
+
+
+.flip {
+    backface-visibility: hidden;
+    border: 1px solid black;
+    height: 150px;
+    position: absolute;
+    transform-origin: 50% 50% 0px;
+    transition: all 3s;
+    width: 300px;    
+}
+
+#templateDiv {
+    transform: rotateY( 0deg );
+}
+
+#side-2 {
+    transform: rotateY( 180deg );   
+}
+
+.flip-side-1 {    
+    transform: rotateY( 0deg ) !important;
+}
+
+.flip-side-2 {
+    transform: rotateY( 180deg ) !important;
+}
