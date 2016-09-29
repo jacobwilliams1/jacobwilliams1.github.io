@@ -18,10 +18,11 @@
    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <link rel="stylesheet" href="tic-tac-toe.css">
 <script type="text/javascript" src="tic-tac-toe.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 </head>
 
 <body>
-<div class="container">
+<div id="top" class="container">
 <div class="row">       
 <div class="col-md-4" id="X">PLAYER X WINS</div>
 
@@ -39,30 +40,30 @@
 <table>
   <tr>
     <td id="0">
-      <button id="0b"></button>
+      <button id="0b" style = "border-left: none; border-top: none; border-color: #d6d963; border-width: 10px"></button>
       </td>
     <td id="1">
-      <button   id="1b"></button>
+      <button id="1b" style = "border-top: none; border-color: #d6d963; border-width: 10px"></button>
       </td>
     <td id="2">
-      <button id="2b"></button>
+      <button id="2b" style = "border-right: none; border-top: none; border-color: #d6d963; border-width: 10px"></button>
       </td>
   </tr>
   <tr>
-    <td id="3"><button id="3b"></button></td>
-    <td id="4"><button  id="4b"></button></td>
-    <td id="5"><button   id="5b"></button></td>
+    <td id="3"><button id="3b" style = "border-left: none; border-color: #d6d963; border-width: 10px"></button></td>
+    <td id="4"><button  id="4b" style="border-color: #d6d963; border-width: 10px"></button></td>
+    <td id="5"><button   id="5b" style = "border-right: none; border-color: #d6d963; border-width: 10px"></button></td>
   </tr>
   <tr>
-    <td id="6"><button   id="6b"></button></td>
-    <td id="7"><button  id="7b"></button></td>
-    <td id="8"><button  id="8b"></button></td>
+    <td id="6"><button   id="6b" style = "border-left: none; border-bottom: none; border-color: #d6d963; border-width: 10px"></button></td>
+    <td id="7"><button  id="7b" style = "border-bottom: none; border-color: #d6d963; border-width: 10px"></button></td>
+    <td id="8"><button  id="8b" style = "border-right: none; border-bottom: none; border-color: #d6d963; border-width: 10px"></button></td>
   </tr>
 </table>
 </div>
 </div>
 <!-- AddToAny BEGIN -->
-                <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                <div id = "share" class="a2a_kit a2a_kit_size_32 a2a_default_style">
                     <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
                     <a class="a2a_button_facebook"></a>
                     <a class="a2a_button_twitter"></a>
