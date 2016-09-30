@@ -15,7 +15,6 @@ ul {
     justify-content: space-around;
      display: flex;
 }
-
 li {
     justify-content: space-around;
     float: left;
@@ -28,7 +27,6 @@ li a {
     padding: 16px;
     text-decoration: none;
 }
-
 li a:hover {
     background-color: #111111;
 }
