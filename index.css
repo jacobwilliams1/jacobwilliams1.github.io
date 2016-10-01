@@ -6,6 +6,13 @@ body {
     text-align: center;
     color: black;
 }
+#offramp{
+    width: 130px;
+    position : absolute;
+    left: 0;
+    bottom: 0;
+    opacity : 0.50;
+}
 ul {
     list-style-type: none;
     margin: 0;

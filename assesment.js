@@ -1,53 +1,15 @@
-function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: {lat: +latitude, lng: +longitude},
-        });
-        var marker = new google.maps.Marker({
-          position: {lat: +latitude, lng: +longitude},
-          map: map
-        });
-      }
-// ************************************
-// ** Making a Container for my card **
-// ************************************
-function makeAcard(weatherData) {
+// FIRST THING THAT HAPPENS//
+$(function () {
+    $("#lookupWeatherForPostalCode").on("click", lookupWeatherForPostalCode_Click)
+});
 
-var template = $("#templateDiv").html();
-template = template.replace("@@AREANAME@@", longName1 + ", " + longName2);
-template = template.replace("#map", initMap());
-return template;
+// SECOND THING TO HAPPEN//
+function lookupWeatherForPostalCode_Click() {
+    var pcode = $("#postalCode").val();
+    lookupLatLong("", "", pcode);
 }
 
-
-// ***************************
-// **  Google Web Services  **
-// ***************************
-
-
-var longName1 = "";
-var longName2 = "";
-var latitude = "";
-var longitude ="";
-var latlng="";
-function lookupLatLong_Complete(result) {
-// currentLocale = results.geometry.location;
-// console.log(currentLocale);
-    var result = result.results[0];
-    var latlng= result.geometry.location
-     latitude = result.geometry.location.lat;
-     longitude = result.geometry.location.lng;
-    
-latlng ="{" + "lat: " + +latitude + ", " + "lng: " +  +longitude + "}";
-console.log("The lat and long is " + latlng);
-console.log(latlng);
- longName1 = result.address_components[1].long_name;
- longName2 = result.address_components[2].long_name; 
- var html = makeAcard(result);
-            $("#cards").append(html);
-}
-var currentLocale="";
-var map;
+// THIRD THING TO HAPPEN//
 
 function lookupLatLong(city, state, postalCode) {
     // Create the address.
@@ -72,21 +34,51 @@ function lookupLatLong(city, state, postalCode) {
 
     $.ajax(request);
 }
-// **********************
-// **  Event Handlers  **
-// **********************
-function lookupWeatherForPostalCode_Click() {
-    var pcode = $("#postalCode").val();
-    lookupLatLong("", "", pcode);
-}
 
+// FOURTH THING TO HAPPEN//
+
+function lookupLatLong_Complete(result) {
+     
+    var result = result.results[0];
+     latitude = result.geometry.location.lat;
+     longitude = result.geometry.location.lng;
+ longName1 = result.address_components[1].long_name;
+ longName2 = result.address_components[2].long_name;
+ var html = makeAcard();
+      $("#cards").prepend(html);
+      $("#map").prepend(initMap); 
+}
+function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: {lat: +latitude, lng: +longitude},
+        });
+        var marker = new google.maps.Marker({
+          position: {lat: +latitude, lng: +longitude},
+          map: map
+        });
+}
+// ************************************
+// ** Making a Container for my card **
+// ************************************
+function makeAcard(result) {
+
+var template = $("#templateDiv").html();
+template = template.replace("@@AREANAME@@", longName1 + ", " + longName2);
+// template = template.replace("#map", initMap(map));
+return template;
+}
+var longName1 = "";
+var longName2 = "";
+var latitude = "";
+var longitude ="";
+var latlng="";
+var currentLocale="";
+var map = "";
+// MAKE A MAP//
+
+
+// DELETE BUTTON//
 $(document).on("click", "#removeCard", function(){
    $(this).parent('#rmv').fadeOut();
-});
-// ***********************
-// **  Document ready.  **
-// ***********************
-
-$(function () {
-    $("#lookupWeatherForPostalCode").on("click", lookupWeatherForPostalCode_Click)
 });
